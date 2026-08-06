@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evergreen Tree Service</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo-link">
+        <img src="images/logo-monogram.svg" alt="Evergreen Tree Service monogram" class="logo-monogram" onerror="this.style.display='none'" />
+        <span class="logo-text-nav">EVERGREEN</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#location">Location</a>
+        <a href="#faqs">FAQs</a>
+      </nav>
+      <a href="#contact" class="btn btn-outline-nav">GET A QUOTE</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#location">Location</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#contact" class="btn btn-solid">GET A QUOTE</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="images/logo-full.svg" alt="Evergreen Tree Service" class="hero-logo" onerror="this.outerHTML='<h1 class=hero-logo-text>EVERGREEN<br><span>TREE SERVICE</span></h1>'" />
+      <p class="hero-tagline">Where expert care meets the trees you love.</p>
+      <a href="#contact" class="btn btn-solid">GET A FREE QUOTE</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container two-col">
+      <div class="text-block">
+        <p class="label">About</p>
+        <h2>Evergreen Tree Service</h2>
+        <p>
+          Evergreen Tree Service is a certified, locally owned arborist company
+          dedicated to the health, safety, and beauty of the trees on your property.
+          We believe every tree tells a story — and with the right care, that story
+          can last for generations.
+        </p>
+        <p>
+          Our team brings professional expertise and a genuine love of trees to
+          every job. Whether it's routine pruning, hazard removal, or emergency
+          response, we work carefully, cleanly, and with full respect for your
+          property and the natural world around it.
+        </p>
+        <p>
+          We serve residential and commercial clients across the region, offering
+          honest assessments, transparent pricing, and work you can count on. No
+          upsells, no surprises — just dependable tree care done right.
+        </p>
+      </div>
+      <div class="image-carousel" id="aboutCarousel">
+        <div class="carousel-track" id="carouselTrack1">
+          <img src="images/carousel/t1.webp" alt="Tree care work" />
+          <img src="images/carousel/t2.webp" alt="Pruning in progress" />
+          <img src="images/carousel/t3.webp" alt="Stump removal" />
+          <img src="images/carousel/t4.webp" alt="Healthy trees" />
+          <img src="images/carousel/t5.webp" alt="Aerial work" />
+        </div>
+        <div class="carousel-dots" id="dots1"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / BOOK -->
+  <section class="section book-section" id="services">
+    <div class="container center-block">
+      <h2>Our Services</h2>
+      <p class="subtitle">
+        Professional tree care for every need — from routine maintenance to
+        complex removals. We bring the right equipment, skills, and care to
+        every job.
+      </p>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="service-icon">🌳</div>
+          <h3>Tree Pruning & Trimming</h3>
+          <p>Shape, thin, and maintain your trees for health, safety, and curb appeal.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🪚</div>
+          <h3>Tree Removal</h3>
+          <p>Safe, efficient removal of hazardous, dead, or unwanted trees of any size.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌱</div>
+          <h3>Stump Grinding</h3>
+          <p>Clean stump removal down to below grade — no trace left behind.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Emergency Service</h3>
+          <p>Storm damage response and hazard mitigation available 7 days a week.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Tree Health Assessment</h3>
+          <p>Certified arborist inspections, disease diagnosis, and treatment plans.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏡</div>
+          <h3>Lot Clearing</h3>
+          <p>Full-property clearing for new builds, landscaping projects, or land prep.</p>
+        </div>
+      </div>
+      <div class="book-cta">
+        <a href="#contact" class="btn btn-solid">REQUEST A QUOTE</a>
+        <a href="#about" class="btn btn-outline">LEARN MORE</a>
+      </div>
+      <div class="booking-note">
+        <strong>Important Note</strong>
+        <p>
+          All quotes are free and obligation-free. A certified arborist will assess
+          your property and provide a detailed written estimate before any work begins.
+          We never start work without your signed approval.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAILING LIST -->
+  <section class="section mailing-section" id="mailing">
+    <div class="container center-block narrow">
+      <h2>Stay in the Loop</h2>
+      <p>Seasonal tips, service reminders, and local tree care news — delivered to your inbox.</p>
+      <form class="mailing-form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="Your email address" required aria-label="Email address" />
+        <button type="submit" class="btn btn-solid">SUBSCRIBE</button>
+      </form>
+      <p class="mailing-confirm" id="mailingConfirm" style="display:none;">Thanks for subscribing!</p>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section location-section" id="location">
+    <div class="container two-col reverse">
+      <div class="text-block">
+        <p class="label">Find Us</p>
+        <h2>Our Service Area</h2>
+        <p>
+          Evergreen Tree Service is proudly based in Buffalo, New York, serving
+          residential and commercial clients across Buffalo, Erie County, and
+          surrounding Western New York communities.
+        </p>
+        <p>
+          Our office is open Monday to Friday from 8:00 AM to 6:00 PM. For urgent
+          tree hazards or emergency storm response, our team is available 7 days a week.
+        </p>
+        <a href="#faqs" class="btn btn-outline">VISIT OUR FAQs</a>
+        <div class="contact-details">
+          <a href="https://www.google.com/maps?q=181+Elm+St,+Buffalo,+NY+14203" target="_blank" rel="noopener">📍 181 Elm St, Buffalo, NY 14203</a>
+          <a href="tel:7164428792">📞 (716) 442-8792</a>
+          <a href="mailto:info@evergreentreeservice.com">✉️ info@evergreentreeservice.com</a>
+        </div>
+        <p class="small-note">
+          Have questions about our services, service area, or accessibility? Reach
+          out — we're happy to help.
+        </p>
+      </div>
+      <div class="map-block">
+        <iframe
+          title="Evergreen Tree Service Buffalo location"
+          src="https://maps.google.com/maps?q=181+Elm+St,+Buffalo,+NY+14203&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section faq-section" id="faqs">
+    <div class="container narrow">
+      <p class="label">A Few Common Questions</p>
+      <h2>FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Are you licensed and insured?</button>
+          <div class="faq-answer">
+            <p>Yes. Evergreen Tree Service is fully licensed, and we carry comprehensive liability insurance and WSIB coverage. We're happy to provide proof of insurance before any work begins.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Do you offer free estimates?</button>
+          <div class="faq-answer">
+            <p>Absolutely. All assessments and written quotes are free and come with no obligation. A certified arborist will visit your property and walk you through exactly what work is recommended and why.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What areas do you serve?</button>
+          <div class="faq-answer">
+            <p>We serve Hamilton, Dundas, Ancaster, Stoney Creek, Flamborough, and surrounding areas in the greater Hamilton region. Not sure if you're in our service area? Give us a call.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Do you clean up after the job?</button>
+          <div class="faq-answer">
+            <p>Yes, always. Full cleanup and debris removal is included with every service. We leave your property clean and tidy — often better than we found it.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can you handle large or hazardous trees?</button>
+          <div class="faq-answer">
+            <p>Yes. Our team is trained and equipped for trees of all sizes, including large hazard trees near homes, power lines, and structures. Safety is always our top priority.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How quickly can you respond to storm damage?</button>
+          <div class="faq-answer">
+            <p>We offer emergency storm response 7 days a week. Contact us immediately for urgent situations — we prioritize safety hazards and typically respond within hours.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What payment methods do you accept?</button>
+          <div class="faq-answer">
+            <p>We accept cash, cheque, e-transfer, and all major credit cards. Payment is due upon completion of work unless other arrangements have been made in advance.</p>
+          </div>
+        </div>
+      </div>
+      <p class="faq-contact">Have more questions? <a href="mailto:info@evergreentreeservice.ca">Send us an email</a></p>
+    </div>
+  </section>
+
+  <!-- OUR STORY / SECOND CAROUSEL -->
+  <section class="section story-section" id="story">
+    <div class="container two-col">
+      <div class="image-carousel">
+        <div class="carousel-track" id="carouselTrack2">
+          <img src="images/carousel/t6.webp" alt="Our team at work" />
+          <img src="images/carousel/t7.webp" alt="Tree climbing" />
+          <img src="images/carousel/t8.webp" alt="After service cleanup" />
+          <img src="images/carousel/t9.webp" alt="Healthy landscape" />
+        </div>
+        <div class="carousel-dots" id="dots2"></div>
+      </div>
+      <div class="text-block">
+        <p class="label">The Story of</p>
+        <h2>Evergreen Tree Service</h2>
+        <p>
+          Evergreen was founded by James Hartley, an ISA Certified Arborist with
+          over 20 years of experience in tree care, urban forestry, and
+          hazard assessment across southern Ontario.
+        </p>
+        <p>
+          James started Evergreen with a simple belief: that great tree work
+          comes from people who genuinely care about trees and the people who
+          depend on them. Every member of our crew shares that belief, and it
+          shows in the quality of our work.
+        </p>
+        <p>
+          We're proud to be a local, family-run business — one that treats your
+          property as if it were our own.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYS OF THE HOLLOW → OUR COMMITMENT -->
+  <section class="section commitment-section" id="commitment">
+    <div class="container narrow">
+      <h2>Our Commitment to You</h2>
+      <ul class="commitment-list">
+        <li><strong>Free, transparent quotes</strong> — no surprises, ever.</li>
+        <li><strong>Certified expertise</strong> — ISA Certified Arborists on every job.</li>
+        <li><strong>Full cleanup</strong> — we leave your property spotless.</li>
+        <li><strong>Respect for your property</strong> — we protect driveways, gardens, and structures throughout all work.</li>
+        <li><strong>Honest recommendations</strong> — we only suggest work your trees actually need.</li>
+        <li><strong>Safety first</strong> — all crew members are trained, insured, and follow industry best practices.</li>
+        <li><strong>On-time arrival</strong> — we respect your schedule and communicate clearly if anything changes.</li>
+        <li><strong>Environmental care</strong> — we recycle wood chips and debris where possible.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container narrow center-block">
+      <h2>Get a Free Quote</h2>
+      <p class="subtitle">Tell us about your tree — we'll take it from there.</p>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your name" required aria-label="Your name" />
+          <input type="email" placeholder="Email address" required aria-label="Email address" />
+        </div>
+        <input type="tel" placeholder="Phone number (optional)" aria-label="Phone number" />
+        <input type="text" placeholder="Address or general location" aria-label="Property address" />
+        <textarea rows="5" placeholder="Describe the work you need (tree removal, pruning, stump grinding, etc.)" required aria-label="Service description"></textarea>
+        <div class="sms-consent-row">
+          <label class="sms-label">
+            <input type="checkbox" id="smsConsent" required />
+            <span>I agree to receive SMS text messages from Evergreen Tree Service regarding estimate confirmations, scheduling notifications, and project updates. Message frequency varies. Message & data rates may apply. Reply <strong>STOP</strong> to cancel or <strong>HELP</strong> for help. See our <a href="#" id="openPrivacyInline">Privacy Policy</a> and <a href="#" id="openTermsInline">Terms & Conditions</a>.</span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-solid full-width">SEND REQUEST</button>
+      </form>
+      <p class="contact-confirm" id="contactConfirm" style="display:none;">
+        Thanks! We'll be in touch within 1 business day.
+      </p>
+    </div>
+  </section>
+
+  <!-- RICH FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-col brand-col">
+        <div class="footer-brand-title">
+          <span class="footer-logo-text">EVERGREEN</span>
+          <span class="footer-sub-text">TREE SERVICE</span>
+        </div>
+        <p class="footer-desc">
+          ISA Certified Arborists dedicated to the health, safety, and natural beauty of your trees across Buffalo and Western New York.
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#location">Service Area</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#services">Tree Pruning & Trimming</a></li>
+          <li><a href="#services">Tree Removal</a></li>
+          <li><a href="#services">Stump Grinding</a></li>
+          <li><a href="#services">Emergency Storm Response</a></li>
+          <li><a href="#services">Tree Health Assessment</a></li>
+          <li><a href="#services">Lot Clearing</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Hours -->
+      <div class="footer-col contact-col">
+        <h4>Contact Us</h4>
+        <p class="footer-info">📍 181 Elm St, Buffalo, NY 14203</p>
+        <p class="footer-info">📞 <a href="tel:7164428792">(716) 442-8792</a></p>
+        <p class="footer-info">✉️ <a href="mailto:info@evergreentreeservice.com">info@evergreentreeservice.com</a></p>
+        <div class="footer-hours">
+          <strong>Office Hours:</strong>
+          <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+          <p class="emergency-badge">🚨 24/7 Emergency Storm Care</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">©2026 Evergreen Tree Service. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#" id="openPrivacyBtn">Privacy Policy</a>
+          <a href="#" id="openTermsBtn">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="modal-backdrop" id="privacyModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Privacy Policy</h3>
+        <button type="button" class="modal-close" id="closePrivacyBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="meta-date"><strong>Effective Date:</strong> January 19, 2025 | <strong>Last Updated:</strong> July 9, 2026</p>
+        <p><strong>Evergreen Tree Service</strong> ("we," "our," or "us") is committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website or services.</p>
+        
+        <h4>1. Information We Collect</h4>
+        <p>We may collect the following personal information when you contact us, request a quote, submit a web form, or use our services:</p>
+        <ul>
+          <li>Full name</li>
+          <li>Service address</li>
+          <li>Email address</li>
+          <li>Mobile phone number</li>
+          <li>Service request details and project descriptions</li>
+          <li>Communication history and preferences</li>
+        </ul>
+
+        <h4>2. SMS / Text Message Communications</h4>
+        <p><strong>2a. How We Collect Your Mobile Number:</strong> We collect your mobile phone number when you voluntarily provide it through our website contact forms, phone calls, or direct communication. By providing your mobile number and checking the SMS consent checkbox, you agree to receive text messages from Evergreen Tree Service.</p>
+        <p><strong>2b. Types of Messages We Send:</strong></p>
+        <ul>
+          <li>Estimate confirmations and appointment reminders</li>
+          <li>Project updates and scheduling notifications</li>
+          <li>Customer support communications</li>
+          <li>Service announcements and promotions</li>
+        </ul>
+        <p><strong>2c. Message Frequency:</strong> Message frequency may vary depending on your service requests, appointments, and communications.</p>
+        <p><strong>2d. Message & Data Rates:</strong> Message and data rates may apply depending on your mobile carrier. Evergreen Tree Service is not responsible for carrier charges.</p>
+        <p><strong>2e. How to Opt Out (STOP):</strong> You may stop SMS messages at any time by replying <strong>STOP</strong> to any message received from us.</p>
+        <p><strong>2f. How to Get Help (HELP):</strong> For help with SMS communications, reply <strong>HELP</strong> or contact us directly.</p>
+
+        <h4>3. Mobile Information & SMS Consent</h4>
+        <p>Mobile information, including phone numbers and SMS consent data, will not be shared with third parties or affiliates for marketing purposes.</p>
+
+        <h4>4. How We Use Your Information</h4>
+        <ul>
+          <li>Provide and manage tree care services</li>
+          <li>Respond to inquiries and requests</li>
+          <li>Schedule appointments</li>
+          <li>Improve website and service quality</li>
+          <li>Comply with legal requirements</li>
+        </ul>
+
+        <h4>5. Cookies and Tracking Technologies</h4>
+        <p>We use cookies and similar technologies to improve website functionality, analyze traffic, and enhance user experience.</p>
+
+        <h4>6. Data Security</h4>
+        <p>We use reasonable security measures to protect your personal information from unauthorized access or disclosure.</p>
+
+        <h4>7. Data Retention</h4>
+        <p>We retain personal information only as long as necessary to provide services and comply with applicable laws.</p>
+
+        <h4>8. Your Privacy Rights</h4>
+        <ul>
+          <li>Request access to your personal information</li>
+          <li>Request correction of inaccurate information</li>
+          <li>Request deletion of your personal data</li>
+          <li>Opt out of SMS communications by replying STOP</li>
+        </ul>
+
+        <h4>9. Changes to This Privacy Policy</h4>
+        <p>We may update this Privacy Policy from time to time. Updated versions will be posted on this page with a revised date.</p>
+
+        <h4>10. Contact Information</h4>
+        <p>If you have questions about this Privacy Policy, contact us:</p>
+        <p>
+          <strong>Company:</strong> Evergreen Tree Service<br />
+          <strong>Address:</strong> 181 Elm St, Buffalo, NY 14203<br />
+          <strong>Phone:</strong> (716) 442-8792<br />
+          <strong>Email:</strong> info@evergreentreeservice.com
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS & CONDITIONS MODAL -->
+  <div class="modal-backdrop" id="termsModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Terms & Conditions</h3>
+        <button type="button" class="modal-close" id="closeTermsBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="meta-date"><strong>Effective Date:</strong> January 19, 2025 | <strong>Last Updated:</strong> July 9, 2026</p>
+        <p>Welcome to <strong>Evergreen Tree Service</strong>. By accessing this website or using our services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.</p>
+
+        <h4>1. Business Identity</h4>
+        <p>These Terms and Conditions govern your use of the services provided by Evergreen Tree Service. Contact information is provided below.</p>
+
+        <h4>2. Age Requirement (18+)</h4>
+        <p>By using this website or enrolling in our services, including SMS messaging, you confirm that you are at least 18 years of age. Our SMS program is not directed to individuals under 18.</p>
+
+        <h4>3. Terminology</h4>
+        <p>"Client," "You," and "Your" refers to the user of this website. "The Company," "We," "Our," and "Us" refers to Evergreen Tree Service.</p>
+
+        <h4>4. SMS Messaging Terms of Service</h4>
+        <p><strong>4a. Program Description & Message Types:</strong> By providing your phone number and checking the SMS consent checkbox on our contact forms, you agree to receive recurring automated text messages from Evergreen Tree Service:</p>
+        <ul>
+          <li>Free estimate confirmations and scheduling notifications</li>
+          <li>Appointment reminders and project updates</li>
+          <li>Customer support and follow-up communications</li>
+          <li>Promotional offers related to our tree care services</li>
+        </ul>
+        <p><strong>4b. Message Frequency:</strong> Message frequency varies based on your service activity and interactions with us.</p>
+        <p><strong>4c. Message & Data Rates:</strong> Message and data rates may apply depending on your mobile carrier and service plan. Evergreen Tree Service is not responsible for carrier charges.</p>
+        <p><strong>4d. How to Opt Out (STOP):</strong> You can opt out of receiving SMS messages at any time by replying <strong>STOP</strong> to any message we send.</p>
+        <p><strong>4e. How to Get Help (HELP):</strong> For help with our SMS program, reply <strong>HELP</strong> to any message or contact us directly.</p>
+        <p><strong>4f. Carrier Liability Disclaimer:</strong> Mobile carriers are not liable for delayed or undelivered messages. Evergreen Tree Service cannot guarantee SMS delivery.</p>
+        <p><strong>4g. Supported Carriers:</strong> Our SMS program works with major U.S. wireless carriers. Not all carriers may support every message type.</p>
+
+        <h4>5. Cookies</h4>
+        <p>We use cookies in accordance with our Privacy Policy to improve website functionality and user experience.</p>
+
+        <h4>6. Intellectual Property & License</h4>
+        <p>Unless otherwise stated, Evergreen Tree Service owns the intellectual property rights for all content on this website. Content may not be copied, reproduced, or redistributed without permission.</p>
+
+        <h4>7. Comments & User Content</h4>
+        <p>Evergreen Tree Service reserves the right to monitor and remove inappropriate or violating user content.</p>
+
+        <h4>8. Content Liability</h4>
+        <p>We are not responsible for content appearing on external websites linking to our website.</p>
+
+        <h4>9. Disclaimer</h4>
+        <p>Evergreen Tree Service provides services to the best of our ability. We are not liable for losses or damages resulting from website use or service usage beyond applicable law.</p>
+
+        <h4>10. Changes to These Terms</h4>
+        <p>We reserve the right to update these Terms and Conditions at any time. Updated versions will be posted on this page with a revised date.</p>
+
+        <h4>11. Contact Information</h4>
+        <p>For questions about these Terms and Conditions, please contact us:</p>
+        <p>
+          <strong>Company:</strong> Evergreen Tree Service<br />
+          <strong>Address:</strong> 181 Elm St, Buffalo, NY 14203<br />
+          <strong>Phone:</strong> (716) 442-8792<br />
+          <strong>Email:</strong> info@evergreentreeservice.com
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

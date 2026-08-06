@@ -1,0 +1,32 @@
+.section {
+  background: var(--cream);
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.label {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: .4rem;
+}
+
+.text h2 { margin-top: .3rem; }
+.text p  { max-width: 520px; }
+
+@media (max-width: 900px) {
+  .container { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 600px) {
+  .section { padding: 4rem 1rem; }
+}

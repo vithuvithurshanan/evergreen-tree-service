@@ -1,0 +1,98 @@
+.section {
+  background: var(--cream);
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: .3rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.8rem 1.6rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,.07);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  border-bottom: 3px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(0,0,0,.12);
+  border-bottom-color: var(--green-light);
+}
+
+.icon { font-size: 2.2rem; margin-bottom: .4rem; display: block; }
+.card h3 { color: var(--green-dark); font-size: 1.1rem; }
+.card p  { font-size: .9rem; color: var(--text-mid); flex: 1; }
+
+.cardLink {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--green-mid);
+  text-decoration: none;
+  letter-spacing: .04em;
+  margin-top: .4rem;
+  display: inline-block;
+  transition: color var(--transition);
+}
+.cardLink:hover { color: var(--green-dark); text-decoration: none; }
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--white);
+  border-left: 4px solid var(--green-mid);
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+.noteIcon { font-size: 1.5rem; flex-shrink: 0; }
+.note strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--green-dark);
+  margin-bottom: .3rem;
+}
+.note p { font-size: .88rem; margin: 0; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .section { padding: 4rem 1rem; }
+  .grid { grid-template-columns: 1fr; }
+}

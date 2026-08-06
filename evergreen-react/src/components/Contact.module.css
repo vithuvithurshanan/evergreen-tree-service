@@ -1,0 +1,125 @@
+.section {
+  background: var(--cream);
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── LEFT SIDE ── */
+.label {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: .4rem;
+}
+
+.info h2 {
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.intro {
+  font-size: .95rem;
+  color: var(--text-mid);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
+}
+
+.detailIcon {
+  font-size: 1.2rem;
+  margin-top: .1rem;
+  flex-shrink: 0;
+}
+
+.detailItem strong {
+  display: block;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: .1rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.detailItem span {
+  font-size: .9rem;
+  color: var(--text-mid);
+}
+
+.detailItem a {
+  color: var(--green-mid);
+  font-size: .9rem;
+}
+.detailItem a:hover { color: var(--green-dark); }
+
+.promise {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem;
+  border-left: 4px solid var(--green-light);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.promise span {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+/* ── RIGHT SIDE — iframe wrapper ── */
+.formWrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.12);
+  background: transparent;
+  /* Clip the empty bottom space inside the iframe */
+  height: 850px;
+}
+
+.formWrapper iframe {
+  display: block;
+  width: 100%;
+  height: 901px;   /* full iframe height */
+  border: none;
+  margin-top: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .formWrapper { height: 880px; }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 4rem 1rem; }
+  .formWrapper { height: 946px; }
+}
