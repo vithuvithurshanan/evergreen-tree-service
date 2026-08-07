@@ -62,9 +62,11 @@
 }
 
 .map {
+  min-height: 420px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
+  background: var(--cream);
 }
 .map iframe { display: block; }
 

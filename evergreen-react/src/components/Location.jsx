@@ -1,6 +1,29 @@
+import { useEffect, useRef, useState } from 'react'
 import styles from './Location.module.css'
 
 export default function Location() {
+  const mapRef = useRef(null)
+  const [showMap, setShowMap] = useState(false)
+
+  // The Google Maps embed pulls in its own ~400 KiB JS bundle to render
+  // the interactive map. Defer mounting the iframe until the section is
+  // about to scroll into view instead of loading it with the rest of the page.
+  useEffect(() => {
+    const el = mapRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowMap(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '400px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className={styles.section} id="location">
       <div className={styles.container}>
@@ -40,17 +63,19 @@ export default function Location() {
           </p>
         </div>
 
-        <div className={styles.map}>
-          <iframe
-            title="Evergreen Tree Service location — Buffalo NY"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.243!2d-78.8784!3d42.8864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d312e97e4b50d5%3A0x3e2cde5d0b4c6a1!2s181%20Elm%20St%2C%20Buffalo%2C%20NY%2014203!5e0!3m2!1sen!2sus!4v1680000000000"
-            width="100%"
-            height="420"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div className={styles.map} ref={mapRef}>
+          {showMap && (
+            <iframe
+              title="Evergreen Tree Service location — Buffalo NY"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.243!2d-78.8784!3d42.8864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d312e97e4b50d5%3A0x3e2cde5d0b4c6a1!2s181%20Elm%20St%2C%20Buffalo%2C%20NY%2014203!5e0!3m2!1sen!2sus!4v1680000000000"
+              width="100%"
+              height="420"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          )}
         </div>
       </div>
     </section>
