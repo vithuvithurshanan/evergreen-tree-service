@@ -42,7 +42,17 @@ export default function Carousel({ images }) {
       >
         {slides.map((slide, i) =>
           slide.src ? (
-            <img key={i} src={slide.src} alt={slide.alt || `Slide ${i + 1}`} className={styles.slide} />
+            <picture key={i}>
+              <source srcSet={slide.src.replace(/\.webp$/, '.avif')} type="image/avif" />
+              <img
+                src={slide.src}
+                alt={slide.alt || `Slide ${i + 1}`}
+                className={styles.slide}
+                width="600"
+                height="460"
+                loading={i === 0 ? 'eager' : 'lazy'}
+              />
+            </picture>
           ) : (
             <div key={i} className={styles.slide} style={{ background: slide.bg }} />
           )

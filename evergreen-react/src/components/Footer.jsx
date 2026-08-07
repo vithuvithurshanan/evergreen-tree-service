@@ -183,7 +183,10 @@ export default function Footer() {
           {/* Brand col */}
           <div className={styles.brandCol}>
             <div className={styles.brandTitle}>
-              <img src="/images/logo.png" alt="Evergreen Tree Service" className={styles.footerLogo} />
+              <picture>
+                <source srcSet="/images/logo.avif" type="image/avif" />
+                <img src="/images/logo.webp" alt="Evergreen Tree Service" className={styles.footerLogo} width="100" height="56" />
+              </picture>
             </div>
             <p className={styles.desc}>
               Professional, certified arborists serving Buffalo, NY and the
@@ -197,7 +200,7 @@ export default function Footer() {
 
           {/* Navigation col */}
           <div className={styles.col}>
-            <h4>Navigation</h4>
+            <h3>Navigation</h3>
             <ul className={styles.navList}>
               <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -211,7 +214,7 @@ export default function Footer() {
 
           {/* Services col */}
           <div className={styles.col}>
-            <h4>Services</h4>
+            <h3>Services</h3>
             <ul className={styles.navList}>
               <li><a href="#services">Tree Trimming</a></li>
               <li><a href="#services">Tree Removal</a></li>
@@ -224,7 +227,7 @@ export default function Footer() {
 
           {/* Contact col */}
           <div className={styles.col}>
-            <h4>Contact</h4>
+            <h3>Contact</h3>
             <p className={styles.info}>📍 181 Elm St<br />Buffalo, NY 14203</p>
             <p className={styles.info}><a href="tel:7164428792">📞 (716) 442-8792</a></p>
             <p className={styles.info}><a href="mailto:info@evergreentreeservice.com">✉️ info@evergreentreeservice.com</a></p>

@@ -63,7 +63,7 @@
 }
 
 /* Generic col */
-.col h4 {
+.col h3 {
   font-family: var(--font-sans);
   font-size: .75rem;
   font-weight: 700;

@@ -1,0 +1,13 @@
+# Evergreen Tree Service
+
+> ISA Certified Arborists providing professional tree care in Buffalo, NY. Licensed, insured, and family-owned, offering free estimates on tree removal, pruning, stump grinding, and emergency storm response.
+
+## Site
+
+- [Home](https://evergreen-tree-service.web.app/): Overview of Evergreen Tree Service and its arborist team.
+- [Services](https://evergreen-tree-service.web.app/#services): Tree trimming, tree removal, stump grinding, emergency services, land clearing, and tree health care.
+- [Pricing](https://evergreen-tree-service.web.app/#pricing): Rate plans for tree care services.
+- [Reviews](https://evergreen-tree-service.web.app/#testimonials): Customer testimonials.
+- [Service Area](https://evergreen-tree-service.web.app/#location): Buffalo, NY and surrounding communities.
+- [FAQs](https://evergreen-tree-service.web.app/#faqs): Common questions about tree service scheduling, pricing, and safety.
+- [Contact](https://evergreen-tree-service.web.app/#contact): Request a free estimate or reach the team directly.

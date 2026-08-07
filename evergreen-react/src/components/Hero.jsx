@@ -3,10 +3,30 @@ import styles from './Hero.module.css'
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      <picture>
+        <source srcSet="/images/hero.avif" type="image/avif" />
+        <img
+          src="/images/hero.webp"
+          alt=""
+          className={styles.heroBg}
+          fetchPriority="high"
+          loading="eager"
+        />
+      </picture>
       <div className={styles.overlay} />
       <div className={styles.content}>
         <div className={styles.badge}>🏆 ISA Certified Arborists</div>
-        <img src="/images/logo.png" alt="Evergreen Tree Service" className={styles.heroLogo} />
+        <picture>
+          <source srcSet="/images/logo.avif" type="image/avif" />
+          <img
+            src="/images/logo.webp"
+            alt="Evergreen Tree Service"
+            className={styles.heroLogo}
+            width="376"
+            height="210"
+            fetchPriority="high"
+          />
+        </picture>
         <p className={styles.tagline}>Where expert care meets the trees you love.</p>
         <div className={styles.actions}>
           <a href="#contact" className={styles.btnSolid}>GET A FREE QUOTE</a>

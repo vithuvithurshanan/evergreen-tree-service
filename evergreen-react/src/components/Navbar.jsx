@@ -44,7 +44,10 @@ export default function Navbar() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <a href="#" className={styles.logo} onClick={close}>
-          <img src="/images/logo.png" alt="Evergreen Tree Service" className={styles.logoImg} />
+          <picture>
+            <source srcSet="/images/logo.avif" type="image/avif" />
+            <img src="/images/logo.webp" alt="Evergreen Tree Service" className={styles.logoImg} width="160" height="46" />
+          </picture>
         </a>
 
         <nav className={styles.nav}>

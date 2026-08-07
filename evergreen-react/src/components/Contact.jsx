@@ -1,15 +1,39 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './Contact.module.css'
 
 export default function Contact() {
+  const formWrapperRef = useRef(null)
+  const [showForm, setShowForm] = useState(false)
+
+  // The embedded form iframe pulls in a heavy third-party bundle
+  // (leadconnectorhq, Facebook pixel, Cloudflare Turnstile). Defer
+  // mounting it until the section is about to scroll into view so
+  // it doesn't add to initial page load / main-thread work.
   useEffect(() => {
+    const el = formWrapperRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowForm(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '400px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!showForm) return
     if (!document.querySelector('script[src="https://link.kdlead.com/js/form_embed.js"]')) {
       const script = document.createElement('script')
       script.src = 'https://link.kdlead.com/js/form_embed.js'
       script.async = true
       document.body.appendChild(script)
     }
-  }, [])
+  }, [showForm])
 
   return (
     <section className={styles.section} id="contact">
@@ -53,24 +77,26 @@ export default function Contact() {
         </div>
 
         {/* RIGHT — iframe, wrapper clips the empty bottom gap */}
-        <div className={styles.formWrapper}>
-          <iframe
-            src="https://link.kdlead.com/widget/form/V8xh7J6oUX3GeflXfxhS"
-            id="inline-V8xh7J6oUX3GeflXfxhS"
-            scrolling="no"
-            data-layout='{"id":"INLINE"}'
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Form 0"
-            data-height="901"
-            data-layout-iframe-id="inline-V8xh7J6oUX3GeflXfxhS"
-            data-form-id="V8xh7J6oUX3GeflXfxhS"
-            title="Contact Form"
-          />
+        <div className={styles.formWrapper} ref={formWrapperRef}>
+          {showForm && (
+            <iframe
+              src="https://link.kdlead.com/widget/form/V8xh7J6oUX3GeflXfxhS"
+              id="inline-V8xh7J6oUX3GeflXfxhS"
+              scrolling="no"
+              data-layout='{"id":"INLINE"}'
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Form 0"
+              data-height="901"
+              data-layout-iframe-id="inline-V8xh7J6oUX3GeflXfxhS"
+              data-form-id="V8xh7J6oUX3GeflXfxhS"
+              title="Contact Form"
+            />
+          )}
         </div>
 
       </div>
