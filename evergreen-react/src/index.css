@@ -2,14 +2,14 @@
 
 :root {
   --green-dark:  #2d4a2e;
-  --green-mid:   #4a7c4e;
+  --green-mid:   #3f6942;
   --green-light: #7aab6e;
   --cream:       #f5f0e8;
   --cream-dark:  #ede5d5;
-  --brown:       #8b6f47;
+  --brown:       #6f5939;
   --text-dark:   #2c2c2c;
   --text-mid:    #5a5a5a;
-  --text-light:  #888;
+  --text-light:  #666666;
   --white:       #ffffff;
   --font-serif:  'Playfair Display', Georgia, serif;
   --font-sans:   'Lato', 'Helvetica Neue', Arial, sans-serif;

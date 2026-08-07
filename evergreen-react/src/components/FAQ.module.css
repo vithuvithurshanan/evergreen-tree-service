@@ -64,7 +64,7 @@
   font-size: .93rem;
   color: var(--text-mid);
 }
-.contact a { color: var(--green-mid); }
+.contact a { color: var(--green-mid); text-decoration: underline; }
 
 @media (max-width: 600px) {
   .section { padding: 4rem 1rem; }
