@@ -1,16 +1,15 @@
-import { useEffect, lazy, Suspense } from 'react'
+import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import BelowFold from './components/BelowFold'
+import Footer from './components/Footer'
 import FloatingActions from './components/FloatingActions'
-
-const BelowFold = lazy(() => import('./components/BelowFold'))
-const Footer = lazy(() => import('./components/Footer'))
 
 const REVEAL_SELECTOR = '.reveal, .reveal-left, .reveal-right'
 
 export default function App() {
   // Wire up scroll reveal for all .reveal elements, including ones added
-  // later by lazy-loaded chunks.
+  // to the DOM after this effect runs.
   useEffect(() => {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -42,13 +41,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Suspense fallback={null}>
-          <BelowFold />
-        </Suspense>
+        <BelowFold />
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-      </Suspense>
+      <Footer />
       <FloatingActions />
     </>
   )
